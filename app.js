@@ -20,7 +20,8 @@ const rollDice = () => {
 
     document.getElementById("player1Dice").src = `images/dice-six-faces-${player1DiceRoll}.png`;
     document.getElementById("player2Dice").src = `images/dice-six-faces-${player2DiceRoll}.png`;
-
+    console.log(`Player 1 rolled: ${player1DiceRoll}`);
+    console.log(`Player 2 rolled: ${player2DiceRoll}`);
 
     if (loser === 1) {
         player1HealthElement.innerText = player1Health - 10;
