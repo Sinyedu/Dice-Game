@@ -42,6 +42,7 @@ const rollDice = () => {
 };
 
 const resetGame = () => {
+    console.clear();
     console.log("Resetting game...");
     const player1HealthElement = document.getElementById("player1Health");
     const player2HealthElement = document.getElementById("player2Health");
