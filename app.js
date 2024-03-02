@@ -31,7 +31,21 @@ const rollDice = () => {
 
     if (loser === 1 && player1Health - 10 <= 0) {
         alert("Player 1 loses the game!");
+        resetGame();
+        rollDice();
     } else if (loser === 2 && player2Health - 10 <= 0) {
         alert("Player 2 loses the game!");
+        resetGame();
+        rollDice();
     }
 };
+
+const resetGame = () => {
+    console.log("Resetting game...");
+    const player1HealthElement = document.getElementById("player1Health");
+    const player2HealthElement = document.getElementById("player2Health");
+    player1HealthElement.innerText = "100";
+    player2HealthElement.innerText = "100";
+};
+
+rollDice();
