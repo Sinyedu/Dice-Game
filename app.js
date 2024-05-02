@@ -22,6 +22,7 @@ const rollDice = () => {
     document.getElementById("player2Dice").src = `images/dice-six-faces-${player2DiceRoll}.png`;
     console.log(`Player 1 rolled: ${player1DiceRoll}`);
     console.log(`Player 2 rolled: ${player2DiceRoll}`);
+ 
 
     if (loser === 1) {
         player1HealthElement.innerText = player1Health - 10;
@@ -33,11 +34,9 @@ const rollDice = () => {
     if (loser === 1 && player1Health - 10 <= 0) {
         alert("Player 1 loses the game!");
         resetGame();
-        rollDice();
     } else if (loser === 2 && player2Health - 10 <= 0) {
         alert("Player 2 loses the game!");
         resetGame();
-        rollDice();
     }
 };
 
